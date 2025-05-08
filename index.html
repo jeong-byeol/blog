@@ -1,11 +1,193 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정한별의 블로그</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정한별의 블로그</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+    }
+    .contact {
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 100;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #topBtn:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>환영합니다!</h1>
+    <img src="https://pbs.twimg.com/profile_images/1738099922455654400/eUFUVnfB_400x400.jpg" alt="내 사진" class="profile-img">
     
+    <nav>
+        <ol>
+            <li><a href="#introduction">홈</a></li><br>
+            <li><a href="#hobby">소개</a></li><br>
+            <li><a href="#block">블로그</a></li><br>
+            <li><a href="#abc">문의</a></li>
+        </ol>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+        <section id="introduction">
+            <h2>안녕하세요!</h2>
+            <pre>
+                
+
+            여기는 정한별의 블로그입니다. 이곳에서 다양한 주제로 이야기를 나눌 예정입니다.
+
+                
+            </pre>
+        </section>
+        <br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <section id="hobby">
+            <h2>소개</h2>
+            <pre>
+                
+
+            저는 블록체인 개발자로, 블록체인 개발 이야기를 기록하고 있습니다.
+
+            
+            </pre>
+           
+        </section>
+        <br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <section id="block">
+            <h2>최신 글</h2>
+            <article>
+                <h3>TIL 1 - SHA-256</h3>
+                <p>
+                  SHA-256은 Secure Hash Algorithm 256-bit의 약자로, 입력 데이터를
+                  고정된 256비트(32바이트) 길이의 해시 값으로 변환하는 암호화 해시
+                  알고리즘입니다.
+                </p>
+              </article>
+              <article>
+                <h3>TIL 2 - 스마트 계약(Smart Contract)</h3>
+                <p>
+                  스마트 계약은 블록체인 상에서 실행되는 자율적인 프로그램으로, 특정
+                  조건이 충족되면 자동으로 실행됩니다.
+                </p>
+                <p>
+                  스마트 계약은 Solidity와 같은 프로그래밍 언어로 작성되며, 특정
+                  규칙을 코딩하고 이를 블록체인에 배포하여 실행할 수 있습니다.
+                </p>
+              </article>
+              
+      
+        </section>
+    </main>
+    <br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <section id="abc">
+    <div class="contact">
+    이메일: wjdgksquf2021@naver.com<br>
+    연락처: 010-0000-0000
+      
+    </div>
+    </section>
+  </div>
+  <button onclick="scrollToTop()" id="topBtn" title="맨 위로">↑ 맨 위로</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
